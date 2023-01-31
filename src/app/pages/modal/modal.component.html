@@ -1,0 +1,32 @@
+<div class="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
+  <h1 mat-dialog-title>Artículo</h1>
+  <form [formGroup]="Listado">
+    <div mat-dialog-content>
+      <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
+
+          <mat-form-field>
+              <input matInput name="codigo" 
+              formControlName="Codigo" type="number" placeholder="0">
+          </mat-form-field>
+
+          <mat-form-field>
+              <input matInput name="descripcion" 
+              formControlName="Descripcion" type="text" placeholder="Ingrese descripción">
+          </mat-form-field>
+
+          <mat-form-field>
+              <input matInput name="precio" 
+              formControlName="Precio" type="number" placeholder="0">
+          </mat-form-field> 
+
+      </div>
+  </div>
+  
+  </form>
+  <div mat-dialog-actions class="text-center">
+    <button class="bg-red-600 py-2 px-4 text-white ml-[2rem] mr-[2rem]  rounded-lg hover:bg-red-800" mat-button (click)="cancelar()">Cancelar</button>
+   <button  class="bg-blue-500 py-2 px-4  text-white  rounded-lg hover:bg-blue-700" mat-button  (click)="confirmar()">Confirmar</button>
+  
+
+</div> 
+</div>
